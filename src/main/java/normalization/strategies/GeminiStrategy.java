@@ -9,20 +9,19 @@ import types.SynapSysMessage;
 
 public class GeminiStrategy implements FMP_Strategy {
     private final SynapSysMessage synapSysMessage;
+    private final Client client;
 
     public GeminiStrategy(SynapSysMessage synapsysMessage) {
         this.synapSysMessage = synapsysMessage;
+        this.client = new Client();
     }
 
     @Override
     public ProviderResponse post() {
-        Client client = new Client();
         GenerateContentResponse response = client.models.generateContent(
                 synapSysMessage.getModel(),
                 synapSysMessage.getMessage(),
                 null);
-        client.close();
-
         return new GeminiResponse(response);
     }
 }
