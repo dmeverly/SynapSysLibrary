@@ -13,4 +13,8 @@ public class Generator {
     public SynapSysMessage generate(SynapSysMessage synapSysMessage) {
         return normalizer.normalize(synapSysMessage);
     }
+
+    public SynapSysMessage generate(SynapSysMessage synapSysMessage, int localPort) {
+        return normalizer.normalize(synapSysMessage, localPort);
+    }
 }
