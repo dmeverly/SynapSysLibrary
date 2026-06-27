@@ -5,7 +5,7 @@
 # SynapSys SDK
 
 **Author**: David Everly  
-**Language**: Java
+**Language**: Java  
 **Status**: Active development  
 Copyright © 2025 David Everly
 
